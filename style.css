@@ -1,0 +1,939 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #be125d;
+    border-radius: 15px;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+/* nav section start ---------- */
+.loader {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000000000000000000000000;
+    animation: load 3s forwards;
+}
+.loader img {
+    width: 14%;
+}
+@keyframes load {
+    0% {
+        visibility: visible;
+    }
+    100% {
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 768px) {
+    .loader img {
+        width: 20%;
+    }
+}
+.modal-body {
+    padding: 50px;
+    border-radius: 20px;
+}
+.modal .modal-body button {
+    font-size: 17px;
+    font-weight: 600;
+}
+.modal .modal-body .google {
+    border: 1px solid #6462629d;
+}
+.modal .modal-body .google:hover {
+    background-color: #64626228;
+}
+.modal .modal-body .apple {
+    background-color: black;
+    color: white;
+    border: none;
+}
+.modal .modal-body .login {
+    background-color: #E21B70;
+    color: white;
+}
+.modal .modal-body .sign {
+    background-color: transparent;
+    border: 1px solid #6462629d;
+}
+.modal .modal-body .sign:hover {
+    background-color: #64626228;
+}
+.modal .modal-body a {
+    color: #E21B70;
+    text-decoration: none;
+}
+
+.navi {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+nav {
+    background-color: white;
+}
+
+nav .navbar-brand img {
+    max-width: 180px;
+    margin-left: 100px;
+}
+
+nav form .btn:nth-child(1) {
+    margin-right: 15px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: all .1s ease-in;
+    font-weight: 400;
+}
+
+nav form .btn:nth-child(1):hover {
+    background-color: rgba(128, 128, 128, 0.116);
+}
+
+nav form .btn:nth-child(2) {
+    margin-right: 15px;
+    background-color: #E21B70;
+    color: white;
+    border-radius: 10px;
+    font-weight: 400;
+    transition: all .1s ease-in;
+    width: 80px;
+}
+
+nav form .btn:nth-child(2):hover {
+    background-color: #be125d;
+}
+
+nav .navbar-toggler {
+    border: none;
+    box-shadow: none;
+}
+
+nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav #menu {
+    width: 70%;
+}
+
+nav form i {
+    margin-right: 28px;
+    color: black;
+}
+
+nav span {
+    font-weight: 500;
+}
+
+nav span i {
+    color: #E21B70;
+    cursor: pointer;
+}
+
+nav span #pop {
+    height: 80px;
+    min-width: 100px;
+    position: absolute;
+    right: 100px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all .2s ease-in;
+    cursor: pointer;
+    background-color: rgb(233, 230, 230);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E21B70;
+    margin: 0 auto;
+}
+
+nav span #pop span {
+    color: black;
+    margin-left: 20px;
+}
+
+nav span #pop i {
+    margin-left: 20px;
+}
+
+nav span i:hover~#pop {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+nav span i:hover {
+    transition: all 0.5s ease-in-out;
+    rotate: 180deg;
+}
+
+@media screen and (max-width: 556px) {
+    nav .navbar-brand img {
+        width: 180px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    nav form .btn:nth-child(1) {
+        border: 1px solid black;
+        color: black;
+        border-radius: 10px;
+        font-weight: 400;
+        transition: all .1s ease-in;
+        font-size: 13px;
+        width: 100px;
+    }
+
+    nav form .btn:nth-child(1):hover {
+        background-color: rgba(128, 128, 128, 0.116);
+    }
+
+    nav form .btn:nth-child(2) {
+        background-color: #E21B70;
+        color: white;
+        border-radius: 10px;
+        font-weight: 400;
+        transition: all .1s ease-in;
+        font-size: 13px;
+        width: 100px;
+    }
+
+    nav form .btn:nth-child(2):hover {
+        background-color: #be125d;
+    }
+
+    nav form i {
+        /* margin-right: 8px; */
+        font-size: 13px;
+        color: black;
+    }
+
+    nav .eng {
+        font-weight: 400;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav .eng i {
+        color: #E21B70;
+        cursor: pointer;
+        margin-right: 20px;
+
+    }
+
+    nav span #pop {
+        height: 80px;
+        min-width: 100px;
+        position: absolute;
+        right: 100px;
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all .2s ease-in;
+        cursor: pointer;
+        background-color: rgb(233, 230, 230);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #E21B70;
+        margin: 0 auto;
+    }
+
+    nav span #pop span {
+        color: black;
+    }
+
+    nav span #pop i {
+        margin-right: 50px;
+    }
+}
+
+/* nav section end ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* first-section-start ----------- */
+.first {
+    width: 100vw;
+    min-height: 80vh;
+    padding-top: 140px;
+    padding-left: 2vw;
+    background-color: #F7F7F7;
+}
+
+.first h1 {
+    color: #333333;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 92px;
+}
+
+.first .form-floating label {
+    color: #333333d3;
+    font-size: 17px;
+}
+
+.first .form-floating {
+    font-size: 14px;
+}
+
+.first .form-floating button {
+    background-color: #E21B70;
+    color: white;
+    width: 150px;
+}
+
+.first .innertext {
+    position: absolute;
+    right: 140px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.first .innertext i {
+    position: absolute;
+    right: 80px;
+    bottom: -10px;
+    font-size: 18px;
+    color: #E21B70;
+}
+
+.first input:focus {
+    box-shadow: none;
+}
+
+.first input:focus~.innertext {
+    display: none;
+}
+
+.first .form-floating button {
+    padding: 10px 0;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.first .form-floating button:hover {
+    background-color: #be125d;
+}
+
+.first .form-floating button:focus {
+    box-shadow: none;
+}
+
+.first img {
+    width: 100%;
+}
+
+.first .bg {
+    background-color: white;
+    padding-top: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: .1px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 570px) {
+    .first img {
+        width: 65vw;
+    }
+
+    .first h1 {
+        font-size: 35px;
+    }
+
+    .first .innertext {
+        position: absolute;
+        right: 140px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .first .innertext i {
+        position: absolute;
+        right: 60px;
+        bottom: -10px;
+        font-size: 10px;
+        color: #E21B70;
+    }
+
+    .first .form-floating label {
+        color: #333333d3;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .first .innertext {
+        position: absolute;
+        right: 118px;
+        font-weight: 500;
+        font-size: 8px;
+    }
+
+    .first .innertext i {
+        position: absolute;
+        right: 40px;
+        bottom: -5px;
+        font-size: 7px;
+        color: #E21B70;
+    }
+
+    .first .form-floating label {
+        color: #333333d3;
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width: 705px) {
+    .first h1 {
+        line-height: 40px;
+    }
+}
+
+/* first-section-end ----------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* second-section-start ---------- */
+.second {
+    height: 100vh;
+    width: 100vw;
+}
+
+.second h1 {
+    margin-left: 10vw;
+    margin-top: 3vw;
+    color: black;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.second .banner img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.second .secBox {
+    width: 40%;
+    padding: 20px;
+    margin-left: 5vw;
+    position: relative;
+    bottom: 100px;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.second .secBox h4 {
+    color: black;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.second .secBox p {
+    font-weight: 400;
+    color: black;
+    font-size: 17px;
+    line-height: 25px;
+    margin: 20px 0;
+}
+
+.second button {
+    background-color: #E21B70;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+}
+
+.second button:hover {
+    background-color: #be125d;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .second h1 {
+        font-size: 28px;
+    }
+
+    .second .secBox {
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+        margin-left: 0;
+    }
+}
+
+/* second-section-end ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .third-section-start ------------- */
+.third {
+    padding: 2vw 0;
+}
+
+.third h1 {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+}
+
+.third .trdImg {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 35vh;
+}
+
+.third .trdImg:hover img {
+    scale: 1.1;
+}
+
+.third img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+}
+
+.third .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.third .cover button {
+    background-color: white;
+    color: black;
+    font-weight: 500;
+    font-size: 1.3vw;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 15px;
+}
+@media screen and (max-width: 1100px) {
+    .third{
+      margin-top: 15vw;
+    }
+}
+@media screen and (max-width: 556px) {
+    .third{
+      margin-top: 28vw;
+    }
+}
+@media screen and (max-width: 450px) {
+    .third{
+      margin-top: 150px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .third{
+      margin-top: 250px;
+    }
+}
+@media screen and (max-width: 325px) {
+    .third{
+      margin-top: 300px;
+    }
+}
+@media screen and (min-width: 800px) and (max-width: 850px) {
+    .third {
+      margin-top: 18vw;
+    }
+}
+/* .third-section-end ------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fourth-section-start -------- */
+.fourth {
+    padding: 60px 0;
+}
+.fourth h1 {
+    font-weight: 700;
+    color: 
+    rgb(51, 51, 51);
+    margin: 10px 0;
+}
+.fourth .forbg {
+    margin-top: 15px;
+    width: 100%;
+    height: 45vh;
+    background-color: #E21B70;
+    border-radius: 15px;
+    color: white;
+    padding: 25px;
+}
+.fourth .forbg .mobile {
+    width: 40vw;
+    margin-bottom: 20px;
+    position: relative;
+    bottom: 70px;
+    margin-left: auto;
+}
+.fourth .qrimg{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fourth .qrimg img {
+    width: 5vw;
+}
+.fourth .forcontent h2 {
+    font-size: 25px;
+}
+.fourth .forcontent p {
+    font-size: 15px;
+    font-weight: 500;
+}
+.fourth .foricons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.fourth .fic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fourth .foricons p, h6 {
+    line-height: 0px;
+}
+.fourth .foricons p {
+    font-size: 10px;
+}
+.fourth .foricons h6 {
+    font-size: 16px;
+}
+.fourth .foricons .fic {
+    background-color: black;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.fourth .foricons .play{
+    width: 25%;
+}
+@media screen and (max-width: 1200px) {
+    .fourth .forbg {
+        min-height: 50vh;
+    }
+}
+@media screen and (max-width: 992px) {
+    .fourth .forbg {
+        min-height: 100vh;
+    }
+    .fourth .forbg .mobile {
+        width: 60vw;
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .fourth .qrimg{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .fourth .qrimg img {
+        width: 10vw;
+    }
+    .fourth .foricons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .fourth .foricons .fic {
+        margin: 10px;
+    }
+}
+/* fourth-section-end -------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fifth-section-start ----- */
+.fifth {
+    margin-top: 80px;
+    padding: 40px 0;
+    width: 100vw;
+    height: 100vh;
+}
+.fifth img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+.fifth h1 {
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+}
+.fifth .fifbox {
+    width: 40%;
+    min-height: 20vh;
+    background-color: white;
+    padding: 18px;
+    border-radius: 20px;
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+}
+.fifth .fifbox h3 {
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+}
+.fifth .fifbox h3 {
+    font-size: 17px;
+    color: black;
+    font-weight: 500;
+}
+.fifth .fifbox button {
+    background-color: #E21B70;
+    transition: all .3s ease-in-out;
+    color: white;
+    font-size: 500;
+}
+.fifth .fifbox button:hover {
+    background-color: #be125d;
+    color: white;
+}
+@media screen and (max-width: 768px) {
+    .fifth .fifbox {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+}
+/* fifth-section-end ----- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* sixth-section-start --------- */
+  .sixth {
+    padding-bottom: 15px;
+  }
+  .sixth h2 {
+    color: black;
+    font-weight: 700;
+    font-size: 35px;
+  }
+  .sixth p {
+    color: black;
+  }
+  .sixth p span {
+    color: #E21B70;
+  }
+  .sixth h3 {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+  }
+  .sixth h4 {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+  }
+  .sixth h5 {
+    color: rgb(51, 51, 51);
+    font-weight: 700;
+  }
+  .sixth a {
+    color: #E21B70;
+    position: relative;
+    font-weight: 500;
+}
+.sixth a::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: #be125d;
+    bottom: 0;
+    transition: all .2s ease-in-out;
+    width: 0%;
+    transform-origin: left;
+}
+.sixth a:hover::before {
+width: 100%;
+  }
+  @media screen and (max-width: 556px) {
+    .sixth h2{
+        margin-top: 30px;
+        font-size: 28px;
+    }
+}
+/* sixth-section-end --------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer-start -------- */
+.footer {
+    padding-top: 25px;
+}
+.footer a {
+    color: rgb(54, 64, 74);
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+}
+.footer a::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    background-color: black;
+    bottom: -1px;
+    transition: all .2s ease-in-out;
+    width: 0%;
+    transform-origin: left;
+}
+.footer a:hover::before {
+width: 100%;
+}
+
+.footer .ftbottom {
+    padding: 20px 0;
+}
+.footer .ftbottom .logo {
+    width: 20%;
+}
+.footer .ftbottom .blogo {
+    width: 13%;
+}
+.footer .ftbottom i {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #333333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.footer .ftbottom i:hover {
+    height: 43px;
+    width: 43px;
+    background-color: #33333325;
+}
+/* footer-end -------- */

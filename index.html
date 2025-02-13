@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foods and Grocery Delivery - Restaurants near me in Pakistan | foodpanda</title>
+  <link rel="shortcut icon" href="./Images/favicon.svg" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+
+<div class="loader"><img src="./Images/loader img.gif" alt=""></div>
+  <!-- nav section start ---------- -->
+  <div class="navi">
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="./Images/logo.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img id="menu" src="./Images/hamburger menu.png" alt="">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex align-items-center ms-auto me-5">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#loginModal" type="button">Log in</button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#signupModal" type="button">Sign up</button>
+            <i class="fa-solid fa-globe"></i>
+            <span class="eng">EN <i class="fa-solid fa-angle-down"></i>
+              <div id="pop"><span>English</span> <i class="fa-solid fa-check-double"></i></div>
+            </span>
+            <i class="fa-solid fa-bag-shopping"></i>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- nav section end ---------- -->
+
+
+
+  <!-- login-modal-start  -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <button type="button" class="btn-close shadow-lg" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-dark fs-3 fw-bold">Welcome!</h4>
+          <p>Sign up or log in to continue</p>
+
+          <button class="btn w-100 btn-primary mb-3 face"><i class="fa-brands fa-facebook me-3"></i> <span class="my-auto">Continue with Facebook</span> </button>
+
+          <button class="btn w-100 mb-3 google"><img class="me-3" src="./Images/googleicon.png" alt="" style="width: 20px;"> <span class="my-auto">Continue with Google</span> </button>
+
+          <button class="btn w-100 mb-3 apple"><i class="fa-brands fa-apple me-3"></i> <span class="my-auto">Continue with Apple</span> </button>
+
+          <p class="text-center">or</p>
+
+
+          <button class="btn w-100 mb-3 login">Login</button>
+
+          <button class="btn w-100 mb-3 sign">Sign up</button>
+
+          <p>By signing up, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy.</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- login-modal-end  -->
+
+  <!-- signup-modal-start  -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+  
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="text-dark fs-3 fw-bold">Welcome!</h4>
+          <p>Sign up or log in to continue</p>
+
+          <button class="btn w-100 btn-primary mb-3 face"><i class="fa-brands fa-facebook me-3"></i> <span class="my-auto">Continue with Facebook</span> </button>
+
+          <button class="btn w-100 mb-3 google"><img class="me-3" src="./Images/googleicon.png" alt="" style="width: 20px;"> <span class="my-auto">Continue with Google</span> </button>
+
+          <button class="btn w-100 mb-3 apple"><i class="fa-brands fa-apple me-3"></i> <span class="my-auto">Continue with Apple</span> </button>
+
+          <p class="text-center">or</p>
+
+
+          <button class="btn w-100 mb-3 login">Login</button>
+
+          <button class="btn w-100 mb-3 sign">Sign up</button>
+
+          <p>By signing up, you agree to our <a href="">Terms and Conditions</a> and <a href="">Privacy Policy.</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signup-modal-end  -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- first-section-start ---------- -->
+  <div class="first">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-7 d-flex align-items-center justify-content-center">
+          <div>
+            <h1>Enjoy discounts on your first order</h1>
+            <div class="bg shadow-lg">
+              <div class="form-floating mb-3 d-flex align-items-center justify-content-center">
+                <input type="search" class="form-control" id="floatingInput" placeholder="search">
+                <label for="floatingInput">Your street and street number</label>
+                <span class="innertext"><i class="fa-solid fa-location-dot"></i></span>
+                <span class="innertext">locate me</span>
+                <button class="btn btn-md">Find food</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-5 d-flex align-items-center justify-content-center">
+          <img src="./Images/hero-section-img.webp" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- first-section-end ---------- -->
+
+
+
+
+
+
+
+
+
+
+  <!-- second-section-start ----- -->
+  <div class="second">
+    <div class="container-fluid">
+      <h1 class="mb-4">You prepare the food, we handle the rest</h1>
+      <div class="banner">
+        <img src="./Images/second-section-img.webp" alt="">
+      </div>
+      <div class="secBox shadow">
+        <h4>List your restaurant or shop on foodpanda</h4>
+        <p>Would you like millions of new customers to enjoy your amazing food and groceries? So would we!</p>
+        <p>It's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver
+          them to hungry pandas – in a heartbeat!</p>
+        <p>Interested? Let's start our partnership today!</p>
+        <button class="btn btn-md">Get started</button>
+      </div>
+    </div>
+  </div>
+  <!-- second-section-end ----- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- third-section-start ------- -->
+  <div class="third">
+    <div class="container">
+      <h1>Find us in these cities and many more!</h1>
+      <div class="row">
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/islamabad.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Islamabad</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/karachi.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Karachi</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/lahore.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Lahore</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/faisalabad.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Faisalabad</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/rawalpindi.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Rawalpindi</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/abbottabad.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Abbottabad</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/bahawalpur.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Bahawalpur</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/dera ghazi khan.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Dera Ghazi Khan</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/gujranwala.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Gujranwala</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/gujrat.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Gujrat</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/hyderabad.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Hyderabad</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/jhlem.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Jhlem</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/kamoke.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Kamoke</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/larkana.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Larkana</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/mangla.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Mangla</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/mardan.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Mardan</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/multan.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Multan</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/murree.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Murree</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/okara.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Okara</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/pano aqil.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Pano Aqil</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/peshawar.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Peshawar</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/peshawar.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Peshawar</button></div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/quetta.avif" alt="">
+            <div class="cover"><button class="btn btn-md">Quetta</button></div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/rahim yar khan.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Rahim Yar Khan</button></div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sadiqabad.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sadiqabad</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sahiwal.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sahiwal</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sargodha.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sargodha</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sheikhupura.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sheikhupura</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sialkot.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sialkot</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/sukkur.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Sukkur</button></div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-6 d-flex align-items-center justify-content-center">
+          <div class="trdImg"><img src="./Images/wah cantt.jpeg" alt="">
+            <div class="cover"><button class="btn btn-md">Wah Cantt</button></div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+  <!-- third-section-end ------- -->
+
+
+
+
+
+
+
+
+
+
+
+  <!-- .fourth-section-start-- ------>
+  <div class="fourth">
+    <div class="container">
+      <h1>Put us in your pocket</h1>
+      <div class="forbg">
+        <div class="row">
+
+
+          <div class="col-lg-6 forcontent d-flex align-items-start justify-content-center mt-4">
+            <div>
+              <h2>Download the food and groceries you love</h2>
+              <div class="qrimg mt-4">
+                <img src="./Images/qr code.png" alt="">
+                <p class="ms-2">
+                  It's all at your fingertips – the restaurants and shops you love. Find the right food and groceries to
+                  suit your mood, and make the first bite last. Go ahead, download us.</p>
+              </div>
+
+              <div class="foricons">
+                <div class="fic"><i class="fa-brands fa-apple fs-2 me-2"></i>
+                  <div>
+                    <p>Download on the</p>
+                    <h6>App Store</h6>
+                  </div>
+                </div>
+                <div class="fic"><img class="me-2 play" src="./Images/play store.png" alt="">
+                  <div>
+                    <p>Download on the</p>
+                    <h6>App Store</h6>
+                  </div>
+                </div>
+                <div class="fic"><i class="fa-solid fa-bag-shopping fs-2 me-2 text-danger"></i>
+                  <div>
+                    <p>Download on the</p>
+                    <h6>App Store</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6 d-flex align-items-center justify-content-center"><img class="mobile"
+              src="./Images/mobiles.webp" alt=""></div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .fourth-section-end-- ---- -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- fifth-section-start ------------- -->
+  <div class="fifth">
+    <div class="container">
+      <h1 class="mb-5">Take your office out to lunch</h1>
+    </div>
+    <div class="container-fluid">
+      <img src="./Images/clients.webp" alt="">
+      <div class="fifbox shadow">
+        <h3 class="fs-3">foodpanda for business</h3>
+        <p class="my-3 fs-5">Order lunch or fuel for work-from-home, late nights in the office, corporate events, client
+          meetings, and much more.</p>
+        <button class="btn btn-md fs-5">Get started</button>
+      </div>
+    </div>
+  </div>
+  <!-- fifth-section-end ------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- sixth-section-start --------- -->
+  <div class="sixth">
+    <div class="container">
+      <h2>Order food and groceries online from the best restaurants and shops on foodpanda</h2>
+      <p class="fw-light fs-5">Are you hungry? Did you have a long and stressful day? Interested in getting a cheesy
+        pizza delivered to your office or looking to avoid the weekly shop? Then foodpanda Pakistan is the right
+        destination for you! foodpanda offers you a long and detailed list of the best restaurants and shops near you to
+        help make your every day easier.</p>
+      <br><br>
+      <h3>What's new?</h3>
+      <p class="fw-light fs-5"><span>✓</span> Wide variety of restaurants and shops, an abundance of cuisines &
+        products.</p>
+      <p class="fw-light fs-5"><span>✓</span> High quality delivery service.</p>
+      <p class="fw-light fs-5"><span>✓</span> Live chat feature to give App users instant help when they need it.</p>
+      <p class="fw-light fs-5"><span>✓</span> NEW: foodpanda grocery delivery! Discover the best shops, pharmacies,
+        bakeries and more near you.</p>
+      <br><br>
+
+      <h4>Frequently Asked Questions</h4>
+      <h5>How can I get foodpanda delivery?</h5>
+      <p class="fw-light fs-5">To get foodpanda delivery, simply locate the restaurants and shops near you by typing in
+        your address, browse through a variety of restaurants and cuisines, check menus and prices, choose your dishes
+        and add them to the basket. Now you only need to checkout and make the payment. Soon your delicious food will
+        arrive at your doorstep!</p>
+      <br><br>
+      <h5>Which takeout restaurants open now near me?</h5>
+      <p class="fw-light fs-5">You can check which takeout restaurants are open now near you by simply typing your
+        address in the location bar on foodpanda and pressing search. You will see all the available restaurants and
+        shops that deliver to your area.</p>
+      <br><br>
+
+      <h5>Does foodpanda deliver 24 hours?</h5>
+      <p class="fw-light fs-5">Yes, foodpanda in Pakistan delivers 24 hours. However, many restaurants may be
+        unavailable for a late-night delivery. Please check which places in Pakistan deliver to you within 24 hours by
+        using your address. You can also order groceries 24 hours a day via pandamart.</p>
+      <br><br>
+
+      <h5>Can you pay cash for foodpanda?</h5>
+      <p class="fw-light fs-5">Yes, you can pay cash on delivery for foodpanda in Pakistan.</p>
+      <br><br>
+
+      <h5>How can I pay foodpanda online?</h5>
+      <p class="fw-light fs-5">You can pay online while ordering at foodpanda Pakistan by using a credit or debit card
+        or PayPal.</p>
+
+      <br><br>
+
+      <h5>Can I order foodpanda for someone else?</h5>
+      <p class="fw-light fs-5">Yes, foodpanda Pakistan allows you to place an order for someone else. During checkout,
+        just update the name and delivery address of the person you're ordering for. Please keep in mind that if the
+        delivery details are not correct and the order cannot be delivered, we won't be able to process a refund.</p>
+      <br><br>
+      <h5>How much does foodpanda charge for delivery?</h5>
+      <p class="fw-light fs-5">Delivery fee charged by foodpanda in Pakistan depends on many operational factors, most
+        of all - location and the restaurant you are ordering from. You can always check the delivery fee while forming
+        your order. Besides, you can filter the restaurants by clicking on the "Free Delivery" icon at the top of your
+        restaurant listing.</p>
+      <br><br>
+
+
+      <h5>What restaurants let you order online?</h5>
+      <p class="fw-light fs-5">There are hundreds of restaurants on foodpanda Pakistan that let you order online. For
+        example, <a href="">KFC,</a> <a href="">McDonald's,</a> <a href="">Pizza Hut,</a> <a href="">OPTP,</a> <a
+          href="">Hardee's,</a> <a href="">Domino's,</a> <a href="">Kababjees</a> and many-many more! In order to check
+        all the restaurants near you that deliver, just type in your address and discover all the available places.</p>
+      <br><br>
+
+
+      <h5>Does foodpanda have minimum order?</h5>
+      <p class="fw-light fs-5">Yes, many restaurants have a minimum order. The minimum order value depends on the
+        restaurant you order from and is indicated during your ordering process.</p>
+
+      <br><br>
+
+      <h5>What is the difference between delivery and Pick-Up?</h5>
+      <p class="fw-light fs-5">If you choose delivery, a foodpanda rider will collect your order from the restaurant and
+        take it to your chosen delivery address. If you choose Pick-Up, you can takeaway your food directly from the
+        restaurant for extra savings – and to jump to the front of the queue. Pick-Up orders are available for
+        restaurants only.</p>
+
+      <br><br>
+
+      <h5>Order food and groceries online with foodpanda now and enjoy a great dining experience!</h5>
+
+    </div>
+  </div>
+  <!-- sixth-section-end --------- -->
+
+
+
+
+
+
+
+
+
+  <!-- footer-start  -->
+  <div class="footer">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href="">Laos</a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href=""> Cambodia</a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href="">Myanmar</a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href="">Thailand</a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href=""> Hong Kong </a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href=""> Taiwan</a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href="">Malaysia </a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href=""> Philippines </a></div>
+        <div class="col-md-2 col-sm-4 col-6 col-lg-1"><a href=""> Singapore </a></div>
+        <div class="col-md-2 col-sm-12 col-6 col-lg-1"><a href="">Bangladesh</a></div>
+      </div>
+      <hr>
+
+
+      <div class="row">
+        <div class="col-xl-3 col-12">
+          <p class="text-center">&copy; foodpanda</p>
+        </div>
+
+        <div class="col-lg-4 col-xl-3 col-md-6 col-12 links">
+          <p><a href="">Press</a></p>
+          <p><a href="">pandapay Terms and Conditions</a></p>
+          <p><a href="">Security</a></p>
+          <p><a href="">Careers </a></p>
+          <p><a href="">Cashback Terms and Conditions</a></p>
+          <p><a href="">Partner with Us</a></p>
+          <p><a href="">All cities </a></p>
+          <p><a href="">pandapro - Monthly Subscription <br> Programme</a></p>
+          <p><a href="">Ramzan deals</a></p>
+          <p><a href="">Areas delivered in Lahore</a></p>
+        </div>
+        <br><br>
+
+        <div class="col-lg-4 col-xl-3 col-md-6 col-12">
+          <p><a href="">Help Center</a></p>
+          <p><a href="">Terms and Conditions</a></p>
+          <p><a href="">Download foodpanda Apps</a></p>
+          <p><a href="">Suggest a Restaurant</a></p>
+          <p><a href="">All cuisines</a></p>
+          <p><a href="">pandago - Request a Rider</a></p>
+          <p><a href="">Update on COVID-19 in Pakistan</a></p>
+          <p><a href="">foodpanda Home Chef</a></p>
+          <p><a href="">Areas delivered in Karachi</a></p>
+          <p><a href="">Areas delivered in Islamabad</a></p>
+        </div>
+
+        <br><br>
+        <div class="col-lg-12 col-xl-3 col-md-6 col-12">
+          <p><a href="">Refunds with pandapay</a></p>
+          <p><a href="">Privacy policy</a></p>
+          <p><a href="">Human rights policy </a></p>
+          <p><a href="">Corporate Customer</a></p>
+          <p><a href="">foodpanda Magazine </a></p>
+          <p><a href="">foodpanda Vouchers & Coupons</a></p>
+          <p><a href="">pandamart Grocery Delivery</a></p>
+          <p><a href="">Become an Affiliate</a></p>
+          <p><a href="">Areas delivered in Gujranwala</a></p>
+          <p><a href="">Areas delivered in Peshawar</a></p>
+        </div>
+        <br><br>
+        <hr>
+      </div>
+
+
+
+    <div class="ftbottom">
+      <div class="row">
+
+      <div class="col-md-6 d-flex align-items-center justify-content-center mt-4">
+        <img class="logo me-5" src="./Images/logo.png" alt="">
+        <img class="blogo" src="./Images/bottom logo.png" alt="">
+      </div>
+
+      <div class="col-md-6 d-flex align-items-center justify-content-center mt-4">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-facebook-f ms-5"></i>
+      </div>
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+  <!-- footer-end  -->
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
